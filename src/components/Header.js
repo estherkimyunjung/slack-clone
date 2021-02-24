@@ -16,7 +16,7 @@ function Header() {
         <HelpOutlineIcon />
       </Main>
       <UserContainer>
-        <Name>Esther</Name>
+        <Name>Esther Kim</Name>
         <UserImage>
           <img src="https://i.imgur.com/6VBx3io.png" alt="Avatar" />
         </UserImage>
