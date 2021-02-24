@@ -1,8 +1,8 @@
 export const channelItemData = [
   {
-    text: "# Channel 1",
+    name: "welcome",
   },
   {
-    text: "# Channel 2",
+    name: "general",
   },
 ];
