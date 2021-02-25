@@ -24,7 +24,13 @@ const Container = styled.div`
   padding: 8px 20px;
   display: flex;
   align-items: center;
+  cursor: pointer;
+
+  :hover {
+    background: #d9d9d9;
+  }
 `;
+
 const UserAvatar = styled.div`
   width: 36px;
   height: 36px;
@@ -36,10 +42,12 @@ const UserAvatar = styled.div`
     width: 100%;
   }
 `;
+
 const MessageContent = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 const Name = styled.div`
   font-weight: 900;
   font-size: 15px;
@@ -52,4 +60,5 @@ const Name = styled.div`
     font-size: 11px;
   }
 `;
+
 const Text = styled.div``;
