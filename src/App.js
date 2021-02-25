@@ -50,12 +50,10 @@ function App() {
             <Main>
               <Sidebar rooms={rooms} />
               <Switch>
-                <Route path="/room">
+                <Route path="/room/:channelId">
                   <Chat />
                 </Route>
-                <Route path="/">
-                  <Login />
-                </Route>
+                <Route path="/"> Select or Create the Channel </Route>
               </Switch>
             </Main>
           </Container>
