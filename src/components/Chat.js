@@ -1,63 +1,70 @@
 import React from "react";
-import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
+import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import StarOutlineIcon from "@material-ui/icons/StarOutline";
 import styled from "styled-components";
+import ChatInput from "./ChatInput";
+import ChatMessage from "./ChatMessage";
 
 function Chat() {
   return (
-    <ChatContainer>
-      <ChatHeaderContainer>
-        <ChannerInfo>
-          <CannelTitle>
-            # General
-            <StarOutlineIcon />
-          </CannelTitle>
-          <CannelDescription>
+    <Container>
+      <Header>
+        <Channel>
+          <ChannelName># general</ChannelName>
+          <ChannelInfo>
             Company-wide announcements and work-based matters
-          </CannelDescription>
-        </ChannerInfo>
-        <ChannelInfoRight>
-          <Name>Details</Name>
-          <ErrorOutlineIcon />
-        </ChannelInfoRight>
-      </ChatHeaderContainer>
-      <Main></Main>
-    </ChatContainer>
+          </ChannelInfo>
+        </Channel>
+        <ChannelDetails>
+          <div>Details</div>
+          <Info />
+        </ChannelDetails>
+      </Header>
+      <MessageContainer>
+        <ChatMessage />
+      </MessageContainer>
+      <ChatInput />
+    </Container>
   );
 }
 
 export default Chat;
 
-const ChatContainer = styled.div``;
-const ChatHeaderContainer = styled.div`
+const Container = styled.div`
+  display: grid;
+  grid-template-rows: 64px auto min-content;
+`;
+
+const Header = styled.div`
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid rgba(83, 39, 83, 0.13);
   justify-content: space-between;
-  border-bottom: 1px solid #949396;
-  height: 64px;
-  padding-right: 19px;
 `;
-const ChannerInfo = styled.div`
-  align-items: center;
-  padding-left: 19px;
+
+const Channel = styled.div``;
+
+const ChannelName = styled.div`
+  font-weight: 700;
 `;
-const CannelTitle = styled.div`
-  padding-top: 6px;
-  padding-bottom: 6px;
-  font-weight: bold;
-  font-size: 16px;
+
+const ChannelInfo = styled.div`
+  font-weight: 400;
+  color: #606060;
+  font-size: 13px;
+  margin-top: 8px;
+`;
+
+const ChannelDetails = styled.div`
   display: flex;
   align-items: center;
+  color: #606060;
 `;
-const CannelDescription = styled.div`
-  color: #949396;
-  font-size: 12px;
+
+const Info = styled(InfoOutlinedIcon)`
+  margin-left: 10px;
 `;
-const ChannelInfoRight = styled.div`
-  display: flex;
-  align-items: center;
-`;
-const Name = styled.div`
-  padding-right: 9px;
-`;
-const Main = styled.div``;
+
+const MessageContainer = styled.div``;
